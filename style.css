@@ -1,0 +1,93 @@
+/* style.css */
+
+/* style.css */
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-image: url('background.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: #333;
+
+    /* ★★★ ここを追加 ★★★ */
+    position: relative;
+    /* 子要素のabsolute配置の基準にする */
+    /* ★★★ ここまで追加 ★★★ */
+}
+
+h1 {
+    color: #0056b3;
+    margin-bottom: 30px;
+    display: none;
+    ;
+}
+
+.stopwatch {
+    font-size: 10em;
+    font-weight: bold;
+    color:
+        #000000;
+    background-color: transparent;
+    padding: 20px 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transform: scaleX(1.4);
+    /* 1.2は120%に横方向に拡大。値を調整してください */
+    transform-origin: center center;
+    /* 拡大の中心を中央に設定 */
+}
+
+.stopwatch span {
+    display: inline-block;
+    min-width: 60px;
+    /* 数字が2桁になってもレイアウトが崩れないように */
+    text-align: center;
+}
+
+/* style.css */
+
+/* style.css */
+
+.random-gif {
+    max-width: 400px;
+    height: auto;
+    /* margin-top は不要になりますので削除するかコメントアウトしてください */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+
+    /* ★★★ ここを追加・変更 ★★★ */
+    position: absolute;
+    /* 絶対配置にする */
+    bottom: 20px;
+    /* 下から20pxの位置 */
+    right: 20px;
+    /* 右から20pxの位置 */
+    /* ★★★ ここまで追加・変更 ★★★ */
+}
+
+/* もしGIFを画面中央下などに固定したい場合 (応用) */
+/*
+body {
+    position: relative; // bodyにposition: relative; を追加
+}
+.random-gif {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 300px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+*/
